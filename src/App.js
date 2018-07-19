@@ -55,10 +55,16 @@ class CarChoice extends Component {
 
   render () {
     return (
-      <div className="roundButtons">
-        <button onClick={this.setCarCondition}>new</button>
-        <button onClick={this.setCarCondition}>used</button>
+      <div className="radioButtons">
+      
+		    <input id='new' type="radio" name="radio" checked />
+        <label onClick={this.setCarCondition} className='choice' htmlFor='new'>new</label>
+        
+		    <input id='used' type="radio" name="radio" />
+        <label onClick={this.setCarCondition} className='choice' htmlFor='used'>used</label>
+      
       </div>
+      
     )
   }
 }
